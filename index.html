@@ -1,27 +1,111 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <meta charset="utf-8">
-  <!--  <meta content="" name="description">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <title>Daily Weather</title>
+
+    <style type="text/css">
+      #cabecalho{
+        background-color: rgb(1, 101, 170);
+        height: 80px;
+
+      }
+      #logo{
+        margin-top: -20px;
+        min-height: 125px;
+        width: 195px;
+      }
+
+    
+        
+      }
+      #controleBusca{
+         padding-top:30px;
+    
+
+      }
+      #conteudo{
+
+        margin-top: 5px;
+      }
+
+      #conteudoA{
+       min-height: 400px;
+       border: black solid 2px;
+       margin-left: 10px;
+
+      }
+
+      #conteudoB{
+        min-height: 400px;
+       border: black solid 2px;
+       margin-left: 208px;
+
+      }
+    </style>
 
     
   </head>
   <body>
-  <h1>Teste Feito do Zero!</h1>
-  <h2>
-  <p>
-    Digite a cidade: <input id='buscaCidade'type="text" value = "teste"><br>
-    <button id="busca">Buscar</button><br>
-    Cidade: <span id="cidade"></span><br>
-    Tempo: <span id="tempo"></span> ºC <br> 
-    Data: <span id="data"></span><br>
-    Sugestões: <span id="roupa"></span><br>
-    
+    <!-- CABEÇALHO -->
+      <div class="container-fluid">
+          <div id="cabecalho" class="row">
+              <div align=center class="col-sm-12 xs-12">
+                
+                <img id="logo" src="Imagens/logo.png" alt="404">
+              </div>
+
+          </div>
+          <br>
+      </div>
+<!-- FIM CABEÇALHO -->
+
+    <!-- BARRA DE PESQUISA E BOTÃO -->
+      <div class="container">
+          <div id="controleBusca" class="row">
+              <div  class="col-sm-9">
+              <input  type="text"class="form-control" id="buscaCidade" requiredmaxlength="100"placeholder="Digite a Cidade" style="text-align: center"  >
+              </div>
+              <div align=center id="botaoPesquisa" class="col-sm-3">
+              <button class="btn btn-primary" id="busca">Buscar</button><br>
+               </div>
+          </div>
+           <br>
+      </div>
+
+      
+    <!-- FIM BARRA DE PESQUISA E BOTÃO -->
+
+    <!-- CONTROLE DE CONTEÚDO -->
+
+    <div id="conteudo" class="container-fluid">
+      <!--  CONTAINER INFORMAÇÕES CLIMÁTICAS -->
+        <div class="row">
+            <div id="conteudoA" class="col-sm-5">
+              <h4 align=center class="page-header">INFORMAÇÕES CLIMÁTICAS</h4>
+              <b>Cidade:</b> <span id="cidade"></span><br>
+              Temperatura: <span id="tempo"></span> ºC <br>
+               Data: <span id="data"></span><br>
+            </div>
+            <!-- FIM CONTAINER INFORMAÇÕES CLIMÁTICAS -->
+
+            <!-- CONTAINER DE RECOMENDAÇÕES -->
+            <div id="conteudoB" class="col-sm-5">
+              <h4 align=center class="page-header">RECOMENDAÇÕES</h2> <br>
+             <span align=center id="roupa"></span> <br>
+            <span <img  class="razer" id="imageoption"></span>
+
+        </div>
+          <!-- FIM CONTAINER DE RECOMENDAÇÕES -->
+    </div>
+    <!-- FIM CONTROLE DE CONTEUDO -->
   
-  </p>
-</h2>
+    <!-- SCRIPTS --> 
     <script>
       document.getElementById('busca').addEventListener('click', function(){
         var cidade = document.getElementById('buscaCidade').value;
@@ -41,6 +125,9 @@
             if(roupa<20){
               console.log('Saia de blusa')
               document.getElementById('roupa').textContent = "Saia de blusa";
+              $(document).ready(function(){
+              $('#imageoption').attr('src','Imagens/blusa.jpg');
+   });
             }
             else{
               document.getElementById('roupa').textContent = "Saia de regata";
@@ -53,5 +140,7 @@
     getWeather();
   });
     </script>
-  </body>
+
+    <!-- FIM SCRIPTS -->
+ </body>
 </html>
