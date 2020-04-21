@@ -16,41 +16,26 @@
     <!-- CABEÇALHO -->
       <div class="container-fluid">
           <div id="cabecalho" class="row">
-              <div align=center class="col-sm-12 xs-12">
-                
+              <div class="col-sm-4 col-xs-4">
                 <img id="logo" src="Imagens/logo.png" alt="404">
               </div>
-
-          </div>
-          <br>
-      </div>
+               <!-- BARRA DE PESQUISA E BOTÃO -->
+                  <div class="col-sm-6 col-xs-6">
+                  <div class="container">
+                    <form  class="form-inline ">  
+                      <div class="form-group mr-xl-2">
+                        <input  type="text"class="form-control" id="buscaCidade" requiredmaxlength="20"placeholder="Digite a Cidade" style="text-align:center">
+                      </div>
+                      <button class="btn btn-primary" id="busca">Buscar</button>
+                    </form>
+                <!-- FIM BARRA DE PESQUISA E BOTÃO -->
+            </div>
+            
+              </div>
+              <div id=textcabecalho class="col-sm-2 col-xs-2"> <h6>A project by NAFA</h6>   </div>
+              </div>
 <!-- FIM CABEÇALHO -->
 
-    <!-- BARRA DE PESQUISA E BOTÃO -->
-      <div class="container">
-          <div id="controleBusca" class="row">
-              <div  class="col-sm-9">
-              <input  type="text"class="form-control" id="buscaCidade" requiredmaxlength="100"placeholder="Digite a Cidade" style="text-align: center"  >
-              </div>
-              <div align=center id="botaoPesquisa" class="col-sm-3">
-              <button class="btn btn-danger" id="busca">Buscar</button><br>
-               </div>
-          </div>
-           <br>
-      </div>
-    <!-- FIM BARRA DE PESQUISA E BOTÃO -->
-
-    <!--FIM CONTROLE DE CONTEUDO -->
-    <div id="conteudo" class="container-fluid">
-      <!--  CONTAINER INFORMAÇÕES CLIMÁTICAS -->
-        <div class="row">
-            <div id="conteudoA" class="col-sm-5">
-              <h4 align=center class="page-header">INFORMAÇÕES CLIMÁTICAS</h4>
-              <b>Cidade:</b> <span id="cidade"></span><br>
-              Temperatura: <span id="tempo"></span> ºC <br>
-               Data: <span id="data"></span><br>
-            </div>
-            <!-- FIM CONTAINER INFORMAÇÕES CLIMÁTICAS -->
 
             <!-- CONTAINER DE RECOMENDAÇÕES -->
             <div id="conteudoB" class="col-sm-5">
@@ -59,13 +44,12 @@
              <img style="display:none;" width="250" id="bigpic" src="bigpic" />
              
 
-        </div>
-          <!-- FIM CONTAINER DE RECOMENDAÇÕES -->
-    </div>
-    <!-- FIM CONTROLE DE CONTEUDO -->
-    <script type="text/javascript" src="js/API/APIScript.js"></script>
-    <script src="js/bootstrap/jquery.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+              </div>
+   
 
+    
+              <script type="text/javascript" src="js/API/APIScript.js"></script>
+              <script src="js/bootstrap/jquery.min.js"></script>
+              <script src="js/bootstrap/bootstrap.min.js"></script>
  </body>
 </html>

@@ -1,33 +1,61 @@
 #cabecalho{
     background-color: rgb(1, 101, 170);
-    height: 80px;
+    height: 100px;
 
   }
   #logo{
-    margin-top: -20px;
-    min-height: 125px;
-    width: 195px;
-  }
-  #controleBusca{
-     padding-top:30px;
-
-
-  }
-  #conteudo{
-
-    margin-top: 5px;
+    margin-left: -30px;
+    margin-top: -5px;
+    height: 120px;
+    width: 160px;
+    
   }
 
-  #conteudoA{
-   min-height: 400px;
-   border: black solid 2px;
-   margin-left: 10px;
+  #textcabecalho{
+
+    margin-top: 79px;
+    padding-right: 0px;
+    margin-left: 0px;
+    left: 63px;
+    color: rgba(245, 245, 245,0.5)
+    
 
   }
 
-  #conteudoB{
-    min-height: 400px;
-   border: black solid 2px;
-   margin-left: 208px;
 
-  }
+  
+.form-inline{
+
+  align-items: right;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  margin-left: -108px;
+}
+
+#agrupa{
+  margin-top: 4px;
+  height: 550px;
+  background-color: rgba(219, 219, 219, 0.9);
+
+}
+
+#infoclima{
+
+  height: 200px;
+
+  background-color: rgba(186, 215, 255, 1);
+  border: 1px solid black;
+
+}
+
+#cid{
+
+height: 30px;
+background-color: pink;
+}
