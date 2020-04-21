@@ -1,146 +1,57 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-    <title>Daily Weather</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Weather</title>
 
-    <style type="text/css">
-      #cabecalho{
-        background-color: rgb(1, 101, 170);
-        height: 80px;
+  <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/bootstrap/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 
-      }
-      #logo{
-        margin-top: -20px;
-        min-height: 125px;
-        width: 195px;
-      }
+  <title>Daily Weather</title>
 
-    
+</head>
+
+<body>
+  <!-- CABEÇALHO -->
+  <div class="container-fluid">
+    <div id="cabecalho" class="row">
+      <div class="col-sm-4 col-xs-4">
+        <img id="logo" src="Imagens/logo.png" alt="404">
+      </div>
+      <!-- BARRA DE PESQUISA E BOTÃO -->
         
-      }
-      #controleBusca{
-         padding-top:30px;
-    
+        <div class="form-inline">
+          <input type="text" class="form-control" id="buscaCidade" requiredmaxlength="20" placeholder="Digite a Cidade"
+            style="text-align:center">
 
-      }
-      #conteudo{
-
-        margin-top: 5px;
-      }
-
-      #conteudoA{
-       min-height: 400px;
-       border: black solid 2px;
-       margin-left: 10px;
-
-      }
-
-      #conteudoB{
-        min-height: 400px;
-       border: black solid 2px;
-       margin-left: 208px;
-
-      }
-    </style>
-
-    
-  </head>
-  <body>
-    <!-- CABEÇALHO -->
-      <div class="container-fluid">
-          <div id="cabecalho" class="row">
-              <div align=center class="col-sm-12 xs-12">
-                
-                <img id="logo" src="Imagens/logo.png" alt="404">
-              </div>
-
-          </div>
-          <br>
-      </div>
-<!-- FIM CABEÇALHO -->
-
-    <!-- BARRA DE PESQUISA E BOTÃO -->
-      <div class="container">
-          <div id="controleBusca" class="row">
-              <div  class="col-sm-9">
-              <input  type="text"class="form-control" id="buscaCidade" requiredmaxlength="100"placeholder="Digite a Cidade" style="text-align: center"  >
-              </div>
-              <div align=center id="botaoPesquisa" class="col-sm-3">
-              <button class="btn btn-primary" id="busca">Buscar</button><br>
-               </div>
-          </div>
-           <br>
-      </div>
-
-      
-    <!-- FIM BARRA DE PESQUISA E BOTÃO -->
-
-    <!-- CONTROLE DE CONTEÚDO -->
-
-    <div id="conteudo" class="container-fluid">
-      <!--  CONTAINER INFORMAÇÕES CLIMÁTICAS -->
-        <div class="row">
-            <div id="conteudoA" class="col-sm-5">
-              <h4 align=center class="page-header">INFORMAÇÕES CLIMÁTICAS</h4>
-              <b>Cidade:</b> <span id="cidade"></span><br>
-              Temperatura: <span id="tempo"></span> ºC <br>
-               Data: <span id="data"></span><br>
-            </div>
-            <!-- FIM CONTAINER INFORMAÇÕES CLIMÁTICAS -->
-
-            <!-- CONTAINER DE RECOMENDAÇÕES -->
-            <div id="conteudoB" class="col-sm-5">
-              <h4 align=center class="page-header">RECOMENDAÇÕES</h2> <br>
-             <span align=center id="roupa"></span> <br>
-            <span <img  class="razer" id="imageoption"></span>
-
+          <button class="btn btn-primary" id="busca">Buscar</button>
         </div>
-          <!-- FIM CONTAINER DE RECOMENDAÇÕES -->
-    </div>
-    <!-- FIM CONTROLE DE CONTEUDO -->
-  
-    <!-- SCRIPTS --> 
-    <script>
-      document.getElementById('busca').addEventListener('click', function(){
-        var cidade = document.getElementById('buscaCidade').value;
+        <!-- FIM BARRA DE PESQUISA E BOTÃO -->
       
-          const url_api = 'https://api.hgbrasil.com/weather?format=json-cors&key=bb4e2a22&city_name='+cidade
-        
-          async function getWeather(){
-          const response = await fetch(url_api);
-          const data = await response.json();
-          const search = data.by = "city_name";
 
-            document.getElementById('cidade').textContent = data.results.city_name;
-            document.getElementById('tempo').textContent = data.results.temp;
-            document.getElementById('data').textContent = data.results.date;
+      <div id=textcabecalho class="col-sm-2 col-xs-2">
+        <h6>A project by NAFA</h6>
+      </div>
+    </div>
+    <!-- FIM CABEÇALHO -->
 
-            var roupa = data.results.temp;
-            if(roupa<20){
-              console.log('Saia de blusa')
-              document.getElementById('roupa').textContent = "Saia de blusa";
-              $(document).ready(function(){
-              $('#imageoption').attr('src','Imagens/blusa.jpg');
-   });
-            }
-            else{
-              document.getElementById('roupa').textContent = "Saia de regata";
-            }
-            console.log(search)
-            console.log(data)
-            console.log(data.results.forecast[0].date);
-    }
- 
-    getWeather();
-  });
-    </script>
 
-    <!-- FIM SCRIPTS -->
- </body>
+    <!-- CONTAINER DE RECOMENDAÇÕES -->
+    <div id="conteudoB" class="col-sm-5">
+      <h4 align=center class="page-header">RECOMENDAÇÕES</h2> <br>
+        Tempo:<span align=center id="tempo"></span> <br>
+
+    </div>
+    <span align=center id="cidade"></span> <br>
+
+
+    <script type="text/javascript" src="js/API/APIScript.js"></script>
+    <script src="js/bootstrap/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+  </div>
+</body>
+
 </html>
