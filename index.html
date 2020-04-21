@@ -1,53 +1,57 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Weather</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Weather</title>
 
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="js/bootstrap/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+  <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/bootstrap/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 
-    <title>Daily Weather</title>
+  <title>Daily Weather</title>
 
-  </head>
-  <body>
-    <!-- CABEÇALHO -->
-      <div class="container-fluid">
-          <div id="cabecalho" class="row">
-              <div class="col-sm-4 col-xs-4"> <!-- Div do logo -->
-                <img id="logo" src="Imagens/logo.png" alt="404">
-              </div><!-- Fim div do logo -->
-                <div id="formulario">
-                <form class="form-inline" >
-                <input  type="text"class="mr-2 form-control" id="buscaCidade" requiredmaxlength="20"placeholder="Digite a Cidade" style="text-align:center">
-                <button class="btn btn-primary" id="busca">Buscar</button>
-              </form>
-              </div>
-               <!-- BARRA DE PESQUISA E BOTÃO -->
-               
-              <div id=textcabecalho class="col-sm-2 col-xs-2"> <h6>A project by NAFA</h6>   </div>
-            
-<!-- FIM CABEÇALHO -->
+</head>
 
-              <!-- INICIO CONTEUDO -->
-              <div id=agrupa class="container-fluid rounded">
-                <center><h2 class="display-5">INFORMAÇÕES CLIMÁTICAS </h2> </center>
+<body>
+  <!-- CABEÇALHO -->
+  <div class="container-fluid">
+    <div id="cabecalho" class="row">
+      <div class="col-sm-4 col-xs-4">
+        <img id="logo" src="Imagens/logo.png" alt="404">
+      </div>
+      <!-- BARRA DE PESQUISA E BOTÃO -->
+        
+        <div class="form-inline">
+          <input type="text" class="form-control" id="buscaCidade" requiredmaxlength="20" placeholder="Digite a Cidade"
+            style="text-align:center">
 
-              <div id=infoclima class="container-fluid rounded">
-                  <div id=cid align=center class="row">
-                    <span id="cidade">teste</span>
-                  </div>
-              </div>
-              <!-- FIM CONTEUDO -->
+          <button class="btn btn-primary" id="busca">Buscar</button>
+        </div>
+        <!-- FIM BARRA DE PESQUISA E BOTÃO -->
+      
+
+      <div id=textcabecalho class="col-sm-2 col-xs-2">
+        <h6>A project by NAFA</h6>
+      </div>
+    </div>
+    <!-- FIM CABEÇALHO -->
 
 
-          
+    <!-- CONTAINER DE RECOMENDAÇÕES -->
+    <div id="conteudoB" class="col-sm-5">
+      <h4 align=center class="page-header">RECOMENDAÇÕES</h2> <br>
+        Tempo:<span align=center id="tempo"></span> <br>
 
-    
-              <script type="text/javascript" src="js/API/APIScript.js"></script>
-              <script src="js/bootstrap/jquery.min.js"></script>
-              <script src="js/bootstrap/bootstrap.min.js"></script>
- </body>
+    </div>
+    <span align=center id="cidade"></span> <br>
+
+
+    <script type="text/javascript" src="js/API/APIScript.js"></script>
+    <script src="js/bootstrap/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+  </div>
+</body>
+
 </html>
+
