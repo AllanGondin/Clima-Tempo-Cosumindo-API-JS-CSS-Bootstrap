@@ -16,36 +16,34 @@
     <!-- CABEÇALHO -->
       <div class="container-fluid">
           <div id="cabecalho" class="row">
-              <div class="col-sm-4 col-xs-4">
+              <div class="col-sm-4 col-xs-4"> <!-- Div do logo -->
                 <img id="logo" src="Imagens/logo.png" alt="404">
+              </div><!-- Fim div do logo -->
+                <div id="formulario">
+                <form class="form-inline" >
+                <input  type="text"class="mr-2 form-control" id="buscaCidade" requiredmaxlength="20"placeholder="Digite a Cidade" style="text-align:center">
+                <button class="btn btn-primary" id="busca">Buscar</button>
+              </form>
               </div>
                <!-- BARRA DE PESQUISA E BOTÃO -->
-                  <div class="col-sm-6 col-xs-6">
-                  <div class="container">
-                    <form  class="form-inline ">  
-                      <div class="form-group mr-xl-2">
-                        <input  type="text"class="form-control" id="buscaCidade" requiredmaxlength="20"placeholder="Digite a Cidade" style="text-align:center">
-                      </div>
-                      <button class="btn btn-primary" id="busca">Buscar</button>
-                    </form>
-                <!-- FIM BARRA DE PESQUISA E BOTÃO -->
-            </div>
-            
-              </div>
+               
               <div id=textcabecalho class="col-sm-2 col-xs-2"> <h6>A project by NAFA</h6>   </div>
-              </div>
+            
 <!-- FIM CABEÇALHO -->
 
+              <!-- INICIO CONTEUDO -->
+              <div id=agrupa class="container-fluid rounded">
+                <center><h2 class="display-5">INFORMAÇÕES CLIMÁTICAS </h2> </center>
 
-            <!-- CONTAINER DE RECOMENDAÇÕES -->
-            <div id="conteudoB" class="col-sm-5">
-              <h4 align=center class="page-header">RECOMENDAÇÕES</h2> <br>
-             <span align=center id="roupa"></span> <br>
-             <img style="display:none;" width="250" id="bigpic" src="bigpic" />
-             
-                
+              <div id=infoclima class="container-fluid rounded">
+                  <div id=cid align=center class="row">
+                    <span id="cidade">teste</span>
+                  </div>
               </div>
-   
+              <!-- FIM CONTEUDO -->
+
+
+          
 
     
               <script type="text/javascript" src="js/API/APIScript.js"></script>
