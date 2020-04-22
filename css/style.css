@@ -6,35 +6,26 @@
   #logo{
     margin-left: -30px;
     margin-top: -5px;
-    height: 120px;
+    height: 115px;
     width: 160px;
     
   }
 
-  #formulario{
-
-    margin-top: 50px;
-    margin-left: 100px;
+  #form-inline{
+    padding-top: 80px;
+    padding-left: 65px;
+    
+  
   }
 
   #textcabecalho{
 
-    margin-top: 79px;
-    padding-right: 0px;
-    margin-left:295px;
+    padding-top: 76px;
     text-align: right;
     color: rgba(245, 245, 245,0.5)
     
 
   }
-
-
-  
-.form-control{
-
-  display: inline-block;
-
-}
 
 
 #agrupa{
