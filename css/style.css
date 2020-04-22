@@ -11,11 +11,8 @@
     
   }
 
-  #form-inline{
-    padding-top: 80px;
-    padding-left: 65px;
-    
-  
+  #formulario{
+   padding-left: 75px;
   }
 
   #textcabecalho{
@@ -29,7 +26,8 @@
 
 
 #agrupa{
- 
+  
+  margin-top: 4px;
   height: 550px;
   background-color: rgba(219, 219, 219, 0.9);
 
@@ -38,15 +36,23 @@
 #infoclima{
 
   height: 200px;
-
   background-color: rgba(186, 215, 255, 1);
-  border: 2px solid black;
+  border: 1px solid black;
+  padding-left: 40px;
   
 
 }
 
-#cid{
+#divnomeCidade{
+  display:flex;
+  justify-content:center;
+  align-items: center;
 
-height: 30px;
-background-color: rgba(219, 219, 219, 0.9)
+
+}
+#linhaTitulos{
+  display:flex;
+  justify-content:space-evenly 
+  
+
 }

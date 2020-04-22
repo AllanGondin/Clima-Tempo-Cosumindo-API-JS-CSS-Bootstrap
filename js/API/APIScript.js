@@ -2,7 +2,6 @@ document.querySelector("#busca").addEventListener('click', function(){
     var cidade = document.getElementById('buscaCidade').value;
     const url_api = 'https://api.hgbrasil.com/weather?format=json-cors&key=367f6284&city_name='+cidade
 
-    
       async function getWeather(){
       const response = await fetch(url_api);
       const data = await response.json();
