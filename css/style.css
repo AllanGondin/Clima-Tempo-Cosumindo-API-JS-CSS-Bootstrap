@@ -33,26 +33,17 @@
 
 }
 
-#infoclima{
-
-  height: 200px;
-  background-color: rgba(186, 215, 255, 1);
-  border: 1px solid black;
-  padding-left: 40px;
+#clima{
+  width: 400px;
+  height: 350px;
+  border: 2px solid black;
   
 
 }
 
-#divnomeCidade{
-  display:flex;
-  justify-content:center;
-  align-items: center;
-
-
-}
-#linhaTitulos{
-  display:flex;
-  justify-content:space-evenly 
+#recomendacoes{
+ 
+  height: 350px;
+  border: 2px solid black;
   
-
 }

@@ -40,29 +40,43 @@
 
     <!-- INICIO CONTEUDO-->
     <div id=agrupa class="container-fluid rounded">
-
-      <center>
-        <h3 class="h3">Informações Climáticas</h6>
-      </center>
-      <!-- SUB DIV DE CLIMA -->
-      <div id="infoclima" class="container-fluid rounded">
-        <!-- PRIMEIRA LINHA -->
-        <div id=divnomeCidade class="row">
-          <h3><span align=center id="cidade"></span></h3>
+      <div class="row" style="padding-top: 8px;">
+        <div class="col-sm-4" style="padding-left: 151px;">
+          <h3>TEMPO HOJE</h3>
         </div>
-        <!-- SEGUNDA LINHA -->
-        <div id=linhaTitulos class="row">
-          <div center class="col-sm-3" style="padding-left: 90px"><b>CLIMA</b></div>
-          <div class="col-sm-3"><b>TEMPERATURA ATUAL</b></div>
-          <div class="col-sm-3"><b>TEMPERATURA MINIMA</b></div>
-          <div class="col-sm-3"><b>TEMPERATURA MAXIMA</b></div>
+        <div class="col-sm-8" style="padding-left: 232px;">
+          <h3>RECOMENDAÇÕES PARA HOJE</h3>
+        </div>
+      </div>
+
+      <!-- infos climaticas e recomendação -->
+      <div class="row">
+        <!-- div infos climaticas -->
+        <div class="col-sm-4">
+          <div id="clima" class="container rounded">
+              <div class="row" style="height:46px;   ">
+                <h4><span id='cidade' style="padding-left: 160px;"></span></h4>
+              </div>
+              <div class="rounded" style="height: 172px; border: 2px solid black; margin-top: 24px;"></div>
+
+              <div class="row">
+                  <div class="col-sm-2" style="height: 40px; background-color: rgb(159, 159, 250);margin-left: 0px; margin-top: 0px;"></div>
+                  <div class="col-sm-2"></div>
+                  <div class="col-sm-8"></div>
+
+              </div>
+          </div>
+        </div>
+
+        <!-- div recomendações -->
+        <div class="col-sm-8">
+          <div id="recomendacoes" class="container rounded">
+          </div>
         </div>
 
 
       </div>
-      <!-- FIM SUB DIV DE CLIMA -->
-
-
+      <!-- Fim infos climaticas e recomendação -->
     </div>
     <!-- FIM CONTEUDO -->
 
