@@ -1,68 +1,53 @@
 <!doctype html>
-<html lang="pt-br">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Weather</title>
+    <meta charset="utf-8">
+    <title>Daily Weather</title>
+    <link rel="stylesheet" href="css/styleindex.css">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-  <script type="text/javascript" src="js/bootstrap/jquery-3.4.1.min.js"></script>
-   <link rel="stylesheet" type="text/css" href="css/styleindex.css" />
 
-  <title>Daily Weather</title>
+
 
 </head>
 
 <body>
-  <div class="container">
-    <ul id="scene">
-      <li class="layer"></li>
-      <li class="layer"></li>
-      <li class="layer"></li>
-      <li class="layer"></li>
-      <li class="layer"></li>
-    </ul>
-  </div>
+    <div class="container-fluid">
+        
+        <ul id="scene">
+            <li class="layer" data-depth="1"><img src="css/nuvem1.png"></li>
+            <li class="layer" data-depth="-1"><img src="css/nuvem2.png"></li>
+            <li class="layer" data-depth="2"><img src="css/nuvem3.png"></li>
+            <li class="layer" data-depth="1"><img src="css/nuvem4.png"></li>
+            <li class="layer" data-depth="0.5"><img src="css/nuvemlogo.png"></li>
+            <!-- FORMULARIO -->
+            <li class="layer" data-depth="0">
+                <div id=formulario class="form-inline">
+                    <input type="text" class="form-control mr-1" id="buscaCidade" requiredmaxlength="20"
+                        placeholder="Digite a Cidade" style="text-align:center">
+                    <button class="btn btn-primary" id="busca">Buscar</button>
+                </div>
+            </li>
+          
+            
+        </ul>
 
 
+    </div>
 
-  <script type="text/javascript" src="js/Passa.js"></script>
-  <script src="js/bootstrap/jquery.min.js"></script>
-  <script src="js/bootstrap/bootstrap.min.js"></script>
-  <script src="js/parallax.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
+    <script type="text/javascript" src="js/indexT.js"></script>
+    <script src="js/bootstrap/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- SCRIPT PARALLAX -->
+    <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+    </script>
+    <!-- FIM SCRIPT  -->
 
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-<!--  
-<div class="container-fluid">
-  <header>
-    <div id="cabecalho" class="row">
-      <div class="col-sm-4 col-xs-4">
-        <img id="logo" src="Imagens/logo.png" alt="404">
-      </div>
-       -->
-<!-- BARRA DE PESQUISA E BOTÃO -->
-<!--  
-      <div id=formulario class="form-inline col-sm-4 col-xs-4">
-        <input type="text" class="form-control mr-1" id="buscaCidade" requiredmaxlength="20"
-          placeholder="Digite a Cidade" style="text-align:center">
-        <button class="btn btn-primary" id="busca">Buscar</button>
-      </div>-->
-
-<!-- FIM BARRA DE PESQUISA E BOTÃO -->
-<!--  
-      <div id=textcabecalho class="col-sm-4 col-xs-4">
-        <h6>A project by NAFA</h6>
-      </div>
-
-    </div>
-  </header>-->
