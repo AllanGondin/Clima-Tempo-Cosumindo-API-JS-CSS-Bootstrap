@@ -1,16 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TESTE</title>
+    <title>Daily Weather</title>
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/bootstrap/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <span id='cidade'>cid</span>
-    <span id='tempo'>tempo</span>
 
-    <script type="text/javascript" src="js/API/APIScript.js"></script>
-    <script src="js/bootstrap/jquery.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+<body>
+    <div=class="container-fluid">
+        <!-- INICIO CONTEUDO-->
+        <div id=agrupa class="container-fluid rounded">
+            <div class="row" style="padding-top: 8px;">
+                <div class="col-sm-4" style="padding-left: 151px;">
+                    <h3>TEMPO HOJE</h3>
+                </div>
+                <div class="col-sm-8" style="padding-left: 232px;">
+                    <h3>RECOMENDAÇÕES PARA HOJE</h3>
+                </div>
+            </div>
+
+            <!-- infos climaticas e recomendação -->
+            <div class="row">
+                <!-- div infos climaticas -->
+                <div class="col-sm-4">
+                    <div id="clima" class="container rounded">
+                        <!-- Label nome da cidade -->
+                        <div class="row" style="height:46px;   ">
+                            <h4><span id='cidade' style="padding-left: 160px;"></span></h4>
+                        </div>
+                        <!-- container clima e temperatura atual -->
+                        <div class="rounded" style="height: 172px; border: 2px solid black; margin-top: 24px;"></div>
+
+                        <div class="row" style="margin-left: 0px; margin-top: 4px;">
+                            <div style="border: 2px solid  black;">
+                                <div class="col-sm-4" style="width: 178px; height:87px;">
+
+                                    <h3>MÁX</h3>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-sm-8"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- div recomendações -->
+                <div class="col-sm-8">
+                    <div id="recomendacoes" class="container rounded">
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- Fim infos climaticas e recomendação -->
+        </div>
+        <script type="text/javascript" src="js/API/APIScript.js"></script>
+        <script src="js/bootstrap/jquery.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+    </div>
 </body>
+
 </html>
