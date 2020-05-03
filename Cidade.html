@@ -13,7 +13,7 @@
 <body>
     <div id=agrupa class="container-fluid">
 
-        <div class="row"  style="padding-top: 40px;">
+        <div class="row" style="padding-top: 40px;">
             <div class="col-sm-4" style="padding-left: 151px;">
                 <h3>TEMPO HOJE</h3>
             </div>
@@ -28,27 +28,36 @@
             <div class="col-sm-4">
                 <div id="clima" class="container rounded">
                     <!-- Label nome da cidade -->
-                    <div class="row" style="height:46px;   ">
-                        <h4><span id='cidade' style="padding-left: 160px;"></span></h4>
+                    <div id="labelCidade" class="row" style="height:46px; ">
+                        <h3><span id='cidade' style="padding-left: 160px; "></span><h4>
                     </div>
                     <!-- container clima e temperatura atual -->
-                    <div class="rounded" style="height: 172px; border: 2px solid black; margin-top: 24px;"></div>
-
-                    <div class="row" style="margin-left: 0px; margin-top: 4px;">
-                        <div style="border: 2px solid  black;">
-                            <div class="col-sm-4" style="width: 180px; height:87px;">
-
-                                <h3>MÁX</h3>
-                                <h3>MÍN</h3>
-
-                            </div>
+                    <div class="rounded" style="height: 172px; border: 2px solid black; margin-top: 24px;">
+                        <div id=icone></div>
+                        <div id=temp>
+                            <div align=center><b>TEMPERATURA <br> ATUAL</b></div>
+                        </div>
+                    </div>
+                    <div style="margin-top:4px; width: 366px; height: 95px; ">
+                        <!-- MÁX E MIN -->
+                        <div class="rounded" style="margin-left: 0px; width: 160px ;height: 89px; border: 2px solid black;">
+                            <div id=min><h4  >MÍN</h4></div>
+                            <div id=max><h4 >MÁX</h4></div>
+                            
+                            
+                            
 
 
                         </div>
 
-                        <div class="col-sm-8"></div>
-
                     </div>
+
+
+
+
+
+
+
                 </div>
             </div>
 

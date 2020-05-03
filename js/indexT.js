@@ -1,5 +1,6 @@
 
 document.querySelector("#busca").addEventListener('click', function(){
+
 var passaValor= function(valor)
 {
    
@@ -7,7 +8,7 @@ var passaValor= function(valor)
 }
 
 
-var paramCidade = document.getElementById('buscaCidade').value;;
+var paramCidade = document.getElementById('buscaCidade').value;
 
  passaValor(paramCidade);
 });
