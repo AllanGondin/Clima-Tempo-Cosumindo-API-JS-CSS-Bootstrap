@@ -26,26 +26,37 @@
         <div class="row">
             <!-- div infos climaticas -->
             <div class="col-sm-4">
-                <div id="clima" class="container rounded">
+                <div id="clima" class="container rounded" style="margin-left: -2px;">
                     <!-- Label nome da cidade -->
                     <div id="labelCidade" class="row" style="height:46px; ">
-                        <h3><span id='cidade' style="padding-left: 160px; "></span><h4>
+                        <h3 id=cidade></h3>
                     </div>
                     <!-- container clima e temperatura atual -->
                     <div class="rounded" style="height: 172px; border: 2px solid black; margin-top: 24px;">
                         <div id=icone></div>
                         <div id=temp>
                             <div align=center><b>TEMPERATURA <br> ATUAL</b></div>
+                            <h2 id=temperatura style="font-size: 6em; text-align: center;"></h2>
                         </div>
                     </div>
                     <div style="margin-top:4px; width: 366px; height: 95px; ">
                         <!-- MÁX E MIN -->
-                        <div class="rounded" style="margin-left: 0px; width: 160px ;height: 89px; border: 2px solid black;">
-                            <div id=min><h4  >MÍN</h4></div>
-                            <div id=max><h4 >MÁX</h4></div>
-                            
-                            
-                            
+                        <div class="rounded"
+                            style="margin-left: 0px; width: 160px ;height: 89px; border: 2px solid black; display: flex; justify-content: space-between;">
+                            <div id=min>
+                                <h4>MÍN</h4></br>
+                                <h3 id=minima></h3>
+
+                            </div>
+                            <div id=max>
+                                <h4>MÁX</h4>
+                                <h3 id=maxima></h3>
+
+
+                            </div>
+
+
+
 
 
                         </div>
@@ -69,11 +80,20 @@
 
 
         </div>
-        <!-- Fim infos climaticas e recomendação -->
-    </div>
-    <script type="text/javascript" src="js/API/APIScript.js"></script>
-    <script src="js/bootstrap/jquery.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!-- Previsão Próximos dias -->
+
+        <div class="container-fluid" style="margin-top:5px">
+            <div class="row" style="height: 40px; display:flex; justify-content: center;">
+                <h3> PREVISÃO PARA OS PRÓXIMOS DIAS</h3>
+                
+            </div>
+            <div class="row rounded" style="border: 2px solid black; height: 178px;"></div>
+
+            <!-- Fim infos climaticas e recomendação -->
+        </div>
+        <script type="text/javascript" src="js/API/APIScript.js"></script>
+        <script src="js/bootstrap/jquery.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
 
 </body>
 

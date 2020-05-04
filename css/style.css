@@ -22,8 +22,9 @@ body{
 #labelCidade{
   padding-top: 12px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
-
 #icone{
   width: 175px;
   height: 167px;
@@ -41,12 +42,14 @@ body{
 
 #min{
 
-  
+ 
   width: 74px;
   height: 85px;
   display: inline-block;
  background-color: white;
  text-align: center;
+ 
+ 
  
 }
 
