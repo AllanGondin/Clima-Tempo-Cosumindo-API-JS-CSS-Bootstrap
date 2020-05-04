@@ -19,7 +19,7 @@ function queryString(parameter) {
 var variavel = queryString("nomeCidade");
 
 
-    const url_api = 'https://api.hgbrasil.com/weather?format=json-cors&key=cab78132&city_name='+variavel;
+    const url_api = 'https://api.hgbrasil.com/weather?format=json-cors&key=e76d33bb&city_name='+variavel;
 
       async function getWeather(){
       const response = await fetch(url_api);
@@ -29,17 +29,10 @@ var variavel = queryString("nomeCidade");
      
       
       document.getElementById('cidade').textContent = data.results.city_name;
-      document.getElementById('temperatura').textContent = data.results.temp;
-      document.getElementById('data').textContent = data.results.time;
-      document.getElementById('minima').textContent = "";
-      document.getElementById('maxima').textContent = 20;
+      document.getElementById('temperatura').textContent = data.results.temp + "°";
+      document.getElementById('minima').textContent = data.results.forecast[0].min + "°";
+      document.getElementById("maxima").textContent = data.results.forecast[0].max + "°";
       
-        
-        
-        
-     
-        
-        
         
         var roupa = data.results.temp;
         if(roupa<20){
