@@ -20,7 +20,7 @@ body{
   
 }
 #labelCidade{
-  padding-top: 12px;
+
   text-align: center;
   display: flex;
   justify-content: center;
@@ -29,14 +29,14 @@ body{
   width: 175px;
   height: 167px;
   display: inline-block;
-  background-color: white;
+  
 }
 
 #temp{
   width: 175px;
   height: 167px;
   display: inline-block;
-  background-color: white;
+  
   float: right;
 }
 
@@ -46,8 +46,9 @@ body{
   width: 74px;
   height: 85px;
   display: inline-block;
- background-color: white;
+ 
  text-align: center;
+ float: left;
  
  
  
@@ -58,6 +59,38 @@ body{
   height: 85px;
   display: inline-block;
   float:right;
-  background-color: white;
   text-align: center;
+}
+
+
+#clima:hover
+{
+        box-shadow:
+                2px 2px #000000,
+                4px 4px #000000,
+                6px 6px #000000;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+
+#recomendacoes:hover
+{
+        box-shadow:
+                2px 2px #000000,
+                4px 4px #000000,
+                6px 6px #000000;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+
+#proxdias:hover
+{
+        box-shadow:
+                2px 2px #000000,
+                4px 4px #000000,
+                6px 6px #000000;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
 }

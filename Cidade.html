@@ -28,8 +28,8 @@
             <div class="col-sm-4">
                 <div id="clima" class="container rounded" style="margin-left: -2px;">
                     <!-- Label nome da cidade -->
-                    <div id="labelCidade" class="row" style="height:46px; ">
-                        <h3 id=cidade></h3>
+                    <div id="labelCidade" class="row" style="height:46px; padding-top: -5px; ">
+                        <h3 id=cidade style="font-size: 3em;"></h3>
                     </div>
                     <!-- container clima e temperatura atual -->
                     <div class="rounded" style="height: 172px; border: 2px solid black; margin-top: 24px;">
@@ -45,13 +45,12 @@
                             style="margin-left: 0px; width: 160px ;height: 89px; border: 2px solid black; display: flex; justify-content: space-between;">
                             <div id=min>
                                 <h4>MÍN</h4></br>
-                                <h3 id=minima></h3>
+                                <h3 id=minima style="margin-top:-23px;font-size: 2.5em; padding-left: 5px;"></h3>
 
                             </div>
                             <div id=max>
                                 <h4>MÁX</h4>
-                                <h3 id=maxima></h3>
-
+                                <h3 id=maxima style="padding-left: 5px; font-size: 2.5em;"></h3>
 
                             </div>
 
@@ -82,12 +81,12 @@
         </div>
         <!-- Previsão Próximos dias -->
 
-        <div class="container-fluid" style="margin-top:5px">
+        <div  class="container-fluid" style="margin-top:5px">
             <div class="row" style="height: 40px; display:flex; justify-content: center;">
                 <h3> PREVISÃO PARA OS PRÓXIMOS DIAS</h3>
                 
             </div>
-            <div class="row rounded" style="border: 2px solid black; height: 178px;"></div>
+            <div class="row rounded" id=proxdias style="border: 2px solid black; height: 178px;"></div>
 
             <!-- Fim infos climaticas e recomendação -->
         </div>
