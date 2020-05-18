@@ -62,7 +62,7 @@ body{
   text-align: center;
 }
 
-
+/* 
 #clima:hover
 {
         box-shadow:
@@ -71,9 +71,9 @@ body{
                 6px 6px #000000;
         -webkit-transform: translateX(-3px);
         transform: translateX(-3px);
-}
+} */
 
-
+/* 
 #recomendacoes:hover
 {
         box-shadow:
@@ -82,15 +82,15 @@ body{
                 6px 6px #000000;
         -webkit-transform: translateX(-3px);
         transform: translateX(-3px);
-}
+} */
 
 
 #proxdias:hover
 {
         box-shadow:
+                1px 1px #000000,
                 2px 2px #000000,
-                4px 4px #000000,
-                6px 6px #000000;
+                3px 3px #000000;
         -webkit-transform: translateX(-3px);
         transform: translateX(-3px);
 }
