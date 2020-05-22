@@ -34,7 +34,7 @@
                     </div>
                     <!-- container clima e temperatura atual -->
                     <div class="rounded" style="height: 172px; border: 2px solid black; margin-top: 24px;">
-                        <div id=icone></div>
+                        <img id=icone src="css/iconestemp/nublado.png" class="oculta">
                         <div id=temp>
                             <div align=center><b>TEMPERATURA <br> ATUAL</b></div>
                             <h2 id=temperatura style="font-size: 6em; text-align: center;"></h2>
@@ -57,7 +57,7 @@
 
 
 
-
+                           
 
                         </div>
 
@@ -75,6 +75,50 @@
             <!-- div recomendações -->
             <div class="col-sm-8">
                 <div id="recomendacoes" class="container rounded">
+                    <div class="fileira">    <!-- 1ª FILEIRA RECOMENDAÇÕES -->
+
+                        <div class=itens>
+                          <img src="css/blusa.png" alt="" class="oculto" id=blusa>   <!-- IMG BLUSA -->
+                        </div>
+    
+                        <div style="margin-left: 32px;" class=itens>
+                           <img src="css/camiseta.png" alt="" class="oculta" id=camiseta>  <!-- IMG GUARDA CHUVA -->
+                        </div>
+    
+                        <div style="margin-left: 32px;" class=itens>
+                           <img src="css/short.png" alt="" class="oculta" id=short>  <!-- IMG GUARDA CHUVA -->
+                        </div>
+    
+                        <div style="margin-left: 28px;" class=itens>
+                             <img src="css/oculos.png" alt="" class="oculta" id=oculos> <!-- IMG GUARDA CHUVA -->
+                        </div>
+    
+
+                    </div>
+                    
+                    <div class=fileira>
+
+                        
+                        <div class=itens>
+                            <img src="css/mascara.png" alt="" class="oculta" id=mascara>   <!-- IMG BLUSA -->
+                          </div>
+      
+                          <div style="margin-left: 32px;" class=itens>
+                             <img src="css/alcool.png" alt="" class="oculta" id=alcool>  <!-- IMG GUARDA CHUVA -->
+                          </div>
+      
+                          <div style="margin-left: 32px;" class=itens>
+                             <img src="css/guarda-chuva.png" alt="" class="oculta" id=gchuva>  <!-- IMG GUARDA CHUVA -->
+                          </div>
+      
+                          <div style="margin-left: 28px;" class=itens>
+                               <img src="css/protetor.png" alt="" class="oculta" id=protetor> <!-- IMG GUARDA CHUVA -->
+                          </div>
+
+                    </div>
+
+
+                    
                 </div>
             </div>
 
@@ -93,11 +137,13 @@
                 <!-- INFOS D + 1  -->
                 <div id=proxdias style="border: 1px black solid;" class="col-md-2">
                     <div>
-                       <!-- DIA DA SEMANA --> <div id=wd1 style="margin-top: -2px; height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
+                       <!-- DIA DA SEMANA --> <div id=wd1 style="height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                        <!-- DATA --> <div id=d1 style="height: 20px;width: 90px; ; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                     </div>
 
-                    <div style="height:95px"></div>
+                    <div style="height:95px">
+                        <img src="css/iconestemp/chuva.png" alt="" id=imgd1 class=iconeproxdias>
+                    </div>
                     
                     
                     <div style="width: 190px; height: 30px; background-color: rgba(255, 255, 255, 0.5) ">
@@ -114,11 +160,13 @@
                 <div id=proxdias style="border: 1px black solid;" class="col-md-2">
                 
                     <div>
-                        <!-- DIA DA SEMANA --> <div id=wd2 style="margin-top: -2px; height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
+                        <!-- DIA DA SEMANA --> <div id=wd2 style="height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                         <!-- DATA --> <div id=d2 style="height: 20px;width: 90px; ; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                      </div>
  
-                     <div style="height:95px"></div>
+                     <div style="height:95px">
+                            <img src="css/iconestemp/chuva.png" alt="" id=imgd2 class=iconeproxdias>
+                    </div>
                      
                      
                      <div style="width: 190px; height: 30px; background-color: rgba(255, 255, 255, 0.5) ">
@@ -134,11 +182,13 @@
                 <div id=proxdias style="border: 1px black solid;"class="col-md-2">
                 
                     <div>
-                        <!-- DIA DA SEMANA --> <div id=wd3 style="margin-top: -2px; height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
+                        <!-- DIA DA SEMANA --> <div id=wd3 style=" height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                         <!-- DATA --> <div id=d3 style="height: 20px;width: 90px; ; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                      </div>
  
-                     <div style="height:95px"></div>
+                     <div style="height:95px">
+                        <img src="css/iconestemp/chuva.png" alt="" id=imgd3  class=iconeproxdias >
+                    </div>
                      
                      
                      <div style="width: 190px; height: 30px; background-color: rgba(255, 255, 255, 0.5) ">
@@ -154,11 +204,13 @@
                 <div id=proxdias style="border: 1px black solid;"class="col-md-2">
                 
                     <div>
-                        <!-- DIA DA SEMANA --> <div id=wd4 style="margin-top: -2px; height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
+                        <!-- DIA DA SEMANA --> <div id=wd4 style="height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                         <!-- DATA --> <div id=d4 style="height: 20px;width: 90px; ; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                      </div>
  
-                     <div style="height:95px"></div>
+                     <div style="height:95px">
+                        <img src="css/iconestemp/chuva.png" alt="" id=imgd4  class=iconeproxdias>
+                    </div>
                      
                      
                      <div style="width: 190px; height: 30px; background-color: rgba(255, 255, 255, 0.5) ">
@@ -174,15 +226,17 @@
                 <div id=proxdias style="border: 1px black solid;"class="col-md-2">
                 
                     <div>
-                        <!-- DIA DA SEMANA --> <div id=wd1 style="margin-top: -2px; height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
-                        <!-- DATA --> <div id=d1 style="height: 20px;width: 90px; ; display: inline-block; font-size: 1.6em; text-align: center;"></div>
+                        <!-- DIA DA SEMANA --> <div id=wd5 style=" height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
+                        <!-- DATA --> <div id=d5 style="height: 20px;width: 90px; ; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                      </div>
  
-                     <div style="height:95px"></div>
+                     <div style="height:95px">
+                        <img src="css/iconestemp/chuva.png" alt="" id=imgd5  class=iconeproxdias>
+                    </div>
                      
                      
                      <div style="width: 190px; height: 30px; background-color: rgba(255, 255, 255, 0.5) ">
-                         <p style="text-align:center; font-size:1.3em">MIN: <span id=mi1></span> | MÁX: <span id=ma1></span></p> 
+                         <p style="text-align:center; font-size:1.3em">MIN: <span id=mi5></span> | MÁX: <span id=ma5></span></p> 
                        
                       </div>
                 
@@ -194,15 +248,17 @@
                 <div id=proxdias style="border: 1px black solid;"class="col-md-2">
                 
                     <div>
-                        <!-- DIA DA SEMANA --> <div id=wd1 style="margin-top: -2px; height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
-                        <!-- DATA --> <div id=d1 style="height: 20px;width: 90px; ; display: inline-block; font-size: 1.6em; text-align: center;"></div>
+                        <!-- DIA DA SEMANA --> <div id=wd6 style=" height: 20px;width: 90px; padding-left: 20px; display: inline-block; font-size: 1.6em; text-align: center;"></div>
+                        <!-- DATA --> <div id=d6 style="height: 20px;width: 90px; ; display: inline-block; font-size: 1.6em; text-align: center;"></div>
                      </div>
  
-                     <div style="height:95px"></div>
+                     <div style="height:95px">
+                        <img src="css/iconestemp/chuva.png" alt="" id=imgd6  class=iconeproxdias>
+                    </div>
                      
                      
                      <div style="width: 190px; height: 30px; background-color: rgba(255, 255, 255, 0.5) ">
-                         <p style="text-align:center; font-size:1.3em">MIN: <span id=mi1></span> | MÁX: <span id=ma1></span></p> 
+                         <p style="text-align:center; font-size:1.3em">MIN: <span id=mi6></span> | MÁX: <span id=ma6></span></p> 
                        
                       </div>
                 

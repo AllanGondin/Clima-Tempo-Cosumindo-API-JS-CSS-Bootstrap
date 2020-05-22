@@ -2,6 +2,7 @@ body{
 
   font-family: 'Concert One', cursive;
   background: url(background.jpg);
+  background-size: 100%;
 }
 
 
@@ -18,6 +19,15 @@ body{
   height: 350px;
   border: 2px solid black;
   
+}
+
+.fileira{
+  margin-top: 2px;
+  height: 170px;
+}
+
+img{
+  height: 170px;
 }
 #labelCidade{
 
@@ -62,6 +72,24 @@ body{
   text-align: center;
 }
 
+.itens{
+  width: 180px;
+  height: 170px;
+  /* background-color: white; */
+  display: inline-block;
+  align-items: center;
+
+}
+.oculta{
+
+  display: none;
+}
+
+.visivel{
+  display: block;
+}
+
+
 /* 
 #clima:hover
 {
@@ -93,4 +121,10 @@ body{
                 3px 3px #000000;
         -webkit-transform: translateX(-3px);
         transform: translateX(-3px);
+}
+
+.iconeproxdias{
+  width:100px;
+  height: 95px;
+  margin-left: 42px;
 }
