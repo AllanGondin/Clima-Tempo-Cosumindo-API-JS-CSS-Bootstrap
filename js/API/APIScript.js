@@ -83,26 +83,35 @@ async function getWeather() {
   var gchuva = document.getElementById("gchuva");
   var protetor = document.getElementById("protetor");
   var tempmax = data.results.forecast[0].max;    //TEMPERATURA MAXIMA DO DIA ATUAL
+  var tempminima = data.results.forecast[0].min;
+  var temp = data.results.temp;
 
+  //MASCARA E ALCOOL SEMPRE VISIVEIS
 
-  if (tempmax < 230) {
-    blusa.classList.remove("oculta");
-    blusa.classList.add("visivel");
-    camiseta.classList.remove("oculta");
-    camiseta.classList.add("visivel");
-    short.classList.remove("oculta");
-    short.classList.add("visivel");
-    oculos.classList.remove("oculta");
-    oculos.classList.add("visivel");
-    mascara.classList.remove("oculta");
-    mascara.classList.add("visivel");
-    alcool.classList.remove("oculta");
-    alcool.classList.add("visivel");
-    gchuva.classList.remove("oculta");
-    gchuva.classList.add("visivel");
-    protetor.classList.remove("oculta");
-    protetor.classList.add("visivel");
-  } 
+  if(tempminima<18){
+  mascara.classList.remove("oculta");
+  mascara.classList.add("visivel");
+  camiseta.classList.remove("oculta");
+  camiseta.classList.add("visivel");
+  protetor.classList.remove("oculta");
+  protetor.classList.add("visivel");
+
+  }
+  
+  /* alcool.classList.remove("oculta");
+  alcool.classList.add("visivel");
+  blusa.classList.remove("oculta");
+  blusa.classList.add("visivel");
+  gchuva.classList.remove("oculta");
+  gchuva.classList.add("visivel");
+  camiseta.classList.remove("oculta");
+  camiseta.classList.add("visivel");
+  short.classList.remove("oculta");
+  short.classList.add("visivel");
+  oculos.classList.remove("oculta");
+  oculos.classList.add("visivel");
+  protetor.classList.remove("oculta");
+  protetor.classList.add("visivel"); */
 
   //FIM CONDICIONAIS DE RECOMENDAÇÃO //
 
@@ -114,6 +123,7 @@ async function getWeather() {
   var codcondicao = data.results.condition_code;    // CONDICAO QUE DEFINE O ICONE A SER USADO
   var fenomeno = data.results.currently;        // INDICA SE ESTÁ DE DIA OU DE NOITE
   var elemento = new Array(6);   //VARIAVEL QUE ARMAZENA ID DOS ICONES DOS PROX DIAS
+  console.log(codcondicao);
 
   //ICONES DO DIA ATUAL//
   let iconediario = {    //OBJETO PARA SEPARAR CONDIÇÕES POR CATEGORIA
@@ -124,19 +134,23 @@ async function getWeather() {
     'tempo nublado': [26, 28],
     'tempo parcialmente fechado': [29, 30, 34, 44]
   }
-
+  var teste;
   Object.keys(iconediario).forEach((el, i) => { //FUNÇÃO QUE FAZ A BUSCA DENTRO DO OBJETO E RETORNA A IMAGEM CORRESPONDENTE
     var tipoclima;
     for (let i = 0; i < 9; i++) {
       if (codcondicao == iconediario[el][i]) {
         tipoclima = el;
-        icone.src =imagem(tipoclima);
+          console.log(imagem(tipoclima));
+         icone.src = imagem(tipoclima);
+
       }
-      
+     
     }
    
-    
+   
   })
+
+  console.log(teste);
 //FIM ICONES NO DIA ATUAL//
 
 
@@ -169,12 +183,11 @@ async function getWeather() {
   //
   Object.keys(iconeproxdias).forEach((el, i) =>{
     var j;
-    var variavel = "imgd"
     for( j = 1; j < 7;j++){
     for (var i = 0; i < 2; i++) {
       if (vetor[j] == iconeproxdias[el][i]) {
        vetor[j] = el;  //QUANDO ELE ACHAR O TERMO CORRESPONDENTE ELE "TRADUZ" ARMAZENANDO O VALOR DO ELEMENTO
-       var recebe =  imagem(vetor[j]);   //variavel "recebe" recebe o caminho da imagem correta
+       var recebe =  imagemproxdias(vetor[j]);   //variavel "recebe" recebe o caminho da imagem correta
        elemento[j].src = recebe;
        
       }
@@ -184,14 +197,17 @@ async function getWeather() {
   }
   })
 
+
+   //FUNÇÃO QUE DEFINE O CAMINHO DOS ICONES PARA A PREVISÃO DO DIA ATUAL
   var caminho;
   function imagem(a) {
     if (a == "tempo parcialmente fechado") {
       if (fenomeno == "dia") {
         return caminho = "./css/iconestemp/solcomnuvens.png";
+        
       }
       else if (fenomeno == "noite") {
-        return caminho = "./css/iconestemp/noitecomnuvens.png";
+        return caminho = "\"./css/iconestemp/noitecomnuvens.png\"";
       }
 
     }
@@ -222,57 +238,40 @@ async function getWeather() {
       return caminho = "./css/iconestemp/chuva.png";
     }
 
-    else if(a=="nublado"){
+    else if(a=="tempo nublado"){
       return  caminho = "./css/iconestemp/nublado.png";
     }
   }
 
-
-
-
-  //FUNÇÃO QUE DETERMINA IMAGEM A SER USADA BASEADA EM UM PARÂMETRO.
- /*  function imagem(a) {
+  
+  //FUNÇÃO QUE DEFINE O CAMINHO DOS ICONES PARA A PREVISÃO DOS PRÓXIMOS DIAS
+  function imagemproxdias(a) {
     if (a == "tempo parcialmente fechado") {
-      if (fenomeno == "dia") {
-        icone.src = "./css/iconestemp/solcomnuvens.png";
-      }
-      else if (fenomeno == "noite") {
-        icone.src = "./css/iconestemp/noitecomnuvens.png";
-      }
-
+     
+        return caminho = "./css/iconestemp/solcomnuvens.png";
+ 
     }
     else if (a == "garoa") {
-      if (fenomeno == "dia") {
-        icone.src = "./css/iconestemp/garoadia.png";
-      }
-      else if (fenomeno == "noite") {
-        icone.src = "./css/iconestemp/garoanoite.png";
-      }
+        return caminho = "./css/iconestemp/garoadia.png";
     }
 
     else if(a == "tempo limpo"){
-      if (fenomeno == "dia") {
-        icone.src = "./css/iconestemp/sol.png";
-      }
-      else if (fenomeno == "noite") {
-        icone.src = "./css/iconestemp/noitelimpa.png";
-      }
-
+        return caminho = "./css/iconestemp/sol.png";
     }
 
     else if(a=="chuva forte"){
-      icone.src = "./css/iconestemp/chuvatrovoada.png";
+      return caminho = "./css/iconestemp/chuvatrovoada.png";
     }
 
     else if(a=="chuva"){
-      icone.src = "./css/iconestemp/chuva.png";
+      return caminho = "./css/iconestemp/chuva.png";
     }
 
-    else if(a=="nublado"){
-      icone.src = "./css/iconestemp/nublado.png";
+    else if(a=="tempo nublado"){
+      return  caminho = "./css/iconestemp/nublado.png";
     }
   }
- */
+
 
 
 
