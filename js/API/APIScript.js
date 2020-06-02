@@ -19,7 +19,7 @@ function queryString(parameter) {
 var variavel = queryString("nomeCidade");
 
 
-const url_api = 'https://api.hgbrasil.com/weather?format=json-cors&key=b1db9ffd&city_name=' + variavel;
+const url_api = 'https://api.hgbrasil.com/weather?format=json-cors&key=2d14540d&city_name=' + variavel;
 
 async function getWeather() {
   const response = await fetch(url_api);
@@ -31,44 +31,6 @@ async function getWeather() {
   document.getElementById('temperatura').textContent = data.results.temp + "°";
   document.getElementById('minima').textContent = data.results.forecast[0].min + "°";
   document.getElementById('maxima').textContent = data.results.forecast[0].max + "°";
-
-
-  //INFOS DIA + 1 
-  document.getElementById('wd1').textContent = data.results.forecast[1].weekday + " -";
-  document.getElementById('d1').textContent = data.results.forecast[1].date;
-  document.getElementById('mi1').textContent = data.results.forecast[1].min + "°";
-  document.getElementById('ma1').textContent = data.results.forecast[1].max + "°";
-
-  //INFOS DIA + 2
-  document.getElementById('wd2').textContent = data.results.forecast[2].weekday + " -";
-  document.getElementById('d2').textContent = data.results.forecast[2].date;
-  document.getElementById('mi2').textContent = data.results.forecast[2].min + "°";
-  document.getElementById('ma2').textContent = data.results.forecast[2].max + "°";
-
-  //INFOS DIA + 3
-  document.getElementById('wd3').textContent = data.results.forecast[3].weekday + " -";
-  document.getElementById('d3').textContent = data.results.forecast[3].date;
-  document.getElementById('mi3').textContent = data.results.forecast[3].min + "°";
-  document.getElementById('ma3').textContent = data.results.forecast[3].max + "°";
-
-  //INFOS DIA + 4
-  document.getElementById('wd4').textContent = data.results.forecast[4].weekday + " -";
-  document.getElementById('d4').textContent = data.results.forecast[4].date;
-  document.getElementById('mi4').textContent = data.results.forecast[4].min + "°";
-  document.getElementById('ma4').textContent = data.results.forecast[4].max + "°";
-
-  //INFOS DIA + 5
-  document.getElementById('wd5').textContent = data.results.forecast[5].weekday + " -";
-  document.getElementById('d5').textContent = data.results.forecast[5].date;
-  document.getElementById('mi5').textContent = data.results.forecast[5].min + "°";
-  document.getElementById('ma5').textContent = data.results.forecast[5].max + "°";
-
-
-  //INFOS DIA + 6
-  document.getElementById('wd6').textContent = data.results.forecast[6].weekday + " -";
-  document.getElementById('d6').textContent = data.results.forecast[6].date;
-  document.getElementById('mi6').textContent = data.results.forecast[6].min + "°";
-  document.getElementById('ma6').textContent = data.results.forecast[6].max + "°";
 
 
 
@@ -94,10 +56,6 @@ async function getWeather() {
   mascara.classList.add("visivel");
   alcool.classList.remove("oculta");
   alcool.classList.add("visivel");
-
-
-
- 
  
 
 
@@ -154,15 +112,47 @@ async function getWeather() {
 
   }
 
-
-
-
-
-
-
   //FIM CONDICIONAIS DE RECOMENDAÇÃO //
 
+  //INFOS PRÓXIMOS DIAS//
 
+
+//INFOS DIA + 1 
+document.getElementById('wd1').textContent = data.results.forecast[1].weekday + " -";
+document.getElementById('d1').textContent = data.results.forecast[1].date;
+document.getElementById('mi1').textContent = data.results.forecast[1].min + "°";
+document.getElementById('ma1').textContent = data.results.forecast[1].max + "°";
+
+//INFOS DIA + 2
+document.getElementById('wd2').textContent = data.results.forecast[2].weekday + " -";
+document.getElementById('d2').textContent = data.results.forecast[2].date;
+document.getElementById('mi2').textContent = data.results.forecast[2].min + "°";
+document.getElementById('ma2').textContent = data.results.forecast[2].max + "°";
+
+//INFOS DIA + 3
+document.getElementById('wd3').textContent = data.results.forecast[3].weekday + " -";
+document.getElementById('d3').textContent = data.results.forecast[3].date;
+document.getElementById('mi3').textContent = data.results.forecast[3].min + "°";
+document.getElementById('ma3').textContent = data.results.forecast[3].max + "°";
+
+//INFOS DIA + 4
+document.getElementById('wd4').textContent = data.results.forecast[4].weekday + " -";
+document.getElementById('d4').textContent = data.results.forecast[4].date;
+document.getElementById('mi4').textContent = data.results.forecast[4].min + "°";
+document.getElementById('ma4').textContent = data.results.forecast[4].max + "°";
+
+//INFOS DIA + 5
+document.getElementById('wd5').textContent = data.results.forecast[5].weekday + " -";
+document.getElementById('d5').textContent = data.results.forecast[5].date;
+document.getElementById('mi5').textContent = data.results.forecast[5].min + "°";
+document.getElementById('ma5').textContent = data.results.forecast[5].max + "°";
+
+
+//INFOS DIA + 6
+document.getElementById('wd6').textContent = data.results.forecast[6].weekday + " -";
+document.getElementById('d6').textContent = data.results.forecast[6].date;
+document.getElementById('mi6').textContent = data.results.forecast[6].min + "°";
+document.getElementById('ma6').textContent = data.results.forecast[6].max + "°";
 
   // CONDICIONAIS DOS ICONES  //
 
@@ -202,6 +192,7 @@ async function getWeather() {
 
   // ICONES DOS PRÓXIMOS DIAS // 
 
+
   //CRIA "OBJETO" PARA REFERÊNCIAR OS DADOS "CONDITION" RECEBIDOS DA API
   let iconeproxdias = {
 
@@ -235,7 +226,7 @@ async function getWeather() {
           vetor[j] = el;  //QUANDO ELE ACHAR O TERMO CORRESPONDENTE ELE "TRADUZ" ARMAZENANDO O VALOR DO ELEMENTO
           var recebe = imagemproxdias(vetor[j]);   //variavel "recebe" recebe o caminho da imagem correta
           elemento[j].src = recebe;
-
+          console.log("transcrita: " + vetor[j]);
         }
 
       }
@@ -318,7 +309,7 @@ async function getWeather() {
     }
   }
 
-
+  
 
 
 
