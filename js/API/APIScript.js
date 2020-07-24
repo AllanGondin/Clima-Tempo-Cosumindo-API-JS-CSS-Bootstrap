@@ -17,9 +17,9 @@ function queryString(parameter) {
 }
 
 var variavel = queryString("nomeCidade");
+var keyApi = '1ed10468';
 
-
-const url_api = 'https://api.hgbrasil.com/weather?format=json-cors&key=2d14540d&city_name=' + variavel;
+const url_api = `https://api.hgbrasil.com/weather?format=json-cors&key=${keyApi}&city_name=${variavel}`;
 
 async function getWeather() {
   const response = await fetch(url_api);
@@ -171,9 +171,8 @@ document.getElementById('ma6').textContent = data.results.forecast[6].max + "°"
     'tempo nublado': [26, 28, 23],
     'tempo parcialmente fechado': [29, 30, 34, 44]
   }
-  var teste;
+  var tipoclima;
   Object.keys(iconediario).forEach((el, i) => { //FUNÇÃO QUE FAZ A BUSCA DENTRO DO OBJETO E RETORNA A IMAGEM CORRESPONDENTE
-    var tipoclima;
     for (let i = 0; i < 9; i++) {
       if (codcondicao == iconediario[el][i]) {
         tipoclima = el;
@@ -239,29 +238,29 @@ document.getElementById('ma6').textContent = data.results.forecast[6].max + "°"
   var caminho;
   function imagem(a) {
     if (a == "tempo parcialmente fechado") {
-      if (fenomeno == "dia") {
+      if (fenomeno == "day") {
         return caminho = "./css/iconestemp/solcomnuvens.png";
 
       }
-      else if (fenomeno == "noite") {
+      else if (fenomeno == "night") {
         return caminho = "./css/iconestemp/noitecomnuvens.png";
       }
 
     }
     else if (a == "garoa") {
-      if (fenomeno == "dia") {
+      if (fenomeno == "day") {
         return caminho = "./css/iconestemp/garoadia.png";
       }
-      else if (fenomeno == "noite") {
+      else if (fenomeno == "night") {
         return caminho = "./css/iconestemp/garoanoite.png";
       }
     }
 
     else if (a == "tempo limpo") {
-      if (fenomeno == "dia") {
+      if (fenomeno == "day") {
         return caminho = "./css/iconestemp/sol.png";
       }
-      else if (fenomeno == "noite") {
+      else if (fenomeno == "night") {
         return caminho = "./css/iconestemp/noitelimpa.png";
       }
 
